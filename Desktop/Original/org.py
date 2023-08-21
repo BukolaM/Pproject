@@ -73,3 +73,53 @@ Write a Python program to convert a given string into a list of words.
 ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog.']
 ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog.']"""
 
+
+def convert_list(item):
+    items = item.split(' ')
+    return items
+
+
+results = convert_list('The quick brown fox jumps over the lazy dog')
+print(results)
+
+
+
+# ------------------------------------------------------------------
+6. 
+"""
+Write a Python program to check whether a given string contains a capital letter, 
+a lower case letter, a number and a minimum length"""
+
+def confirm(items):
+    for item in items:
+        if item.isupper():
+            return "upper"
+        elif item.islower():
+            return "lower"
+        elif item.isdigit():
+            return "digit"
+        
+
+results = confirm('W3resource')
+print(results)
+        
+
+# ------------------------------------------------------------------
+7. 
+'Write a Python program to remove duplicate words from a given string'
+
+def duplicated(items):
+    list_of_items = []
+    for item in items:
+        if item not in list_of_items:
+            list_of_items.append(item)
+
+
+    return " ".join(list_of_items)
+        
+
+results = duplicated(["Python Exercises Practice Solution Exercises"])
+print(results) 
+
+
+        
