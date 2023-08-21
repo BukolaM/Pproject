@@ -117,9 +117,22 @@ def duplicated(items):
 
     return " ".join(list_of_items)
         
-
 results = duplicated(["Python Exercises Practice Solution Exercises"])
 print(results) 
 
+# ------------------------------------------------------------------
+7. 
+'Write a Python program to insert space before every capital letter appears in a given word.'
+def seperator(items):
+    result = ""
+    for item in items:
+        if item.isupper():
+            result = result + " " + item.upper()
+        else:
+            result = result + item
+    return result
 
-        
+
+
+a = seperator("PythonExercises")
+print(a) 
