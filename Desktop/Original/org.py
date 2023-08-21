@@ -36,21 +36,45 @@ def cal_taxi_price(us_dollars,exchange_rate):
 # d = 4
 # print(d)
 
-by = {
-    "a" : 1,
-    "b": 2,
-    "c": 3
-}
+# by = {
+#     "a" : 1,
+#     "b": 2,
+#     "c": 3
+# }
 
-print(by["a"])
+# print(by["a"])
 
 
-def highest_num(a):
-    return max(a)
+# def highest_num(a):
+#     return max(a)
 
-max_num = highest_num([1,5,3])
-print(max_num)
+# max_num = highest_num([1,5,3])
+# print(max_num)
 
+
+# -------------------------------------------------
+def squared_numbers(numbers):
+    dicti = {}
+    count = 0
+
+    for number in numbers:
+        key = number
+        value = number * number
+        count = count + 1
+        dicti[key] = value
+    return dicti
+
+
+result = squared_numbers(range(5,16))
+print(result)
+
+
+
+# ------------------------------------------------
+# import numpy as np
+# tuple1 = ((1,2,3),(4,5,6))
+# array1 = np.array(tuple1)
+# print(array1)
 
 
 
