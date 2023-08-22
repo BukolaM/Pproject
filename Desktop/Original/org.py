@@ -158,8 +158,42 @@ def intergers_(items):
 
 
 
-
-
-
 intergers_([11, 33, 50])
-print(result)
+
+
+
+# ------------------------------------------------------------------
+9.
+"""
+Write a Python program to convert a list to a list of dictionaries.
+Sample lists: ["Black", "Red", "Maroon", "Yellow"], ["#000000", "#FF0000", "#800000", "#FFFF00"]"""
+
+def dictionary_p(a, b):
+    dicti = {}
+    count = 0
+    for item in a:
+        key = item
+        value = b[count]
+        count = count + 1
+        dicti[key] = value
+    return dicti
+
+result = dictionary_p(["Black", "Red", "Maroon", "Yellow"], ["#000000", "#FF0000", "#800000", "#FFFF00"] )
+print(result) 
+
+
+
+item = ["Black", "Red", "Maroon", "Yellow"]
+values = ["#000000", "#FF0000", "#800000", "#FFFF00"]
+
+empty_dict = {}
+count = 0
+for keys in item:
+    key = keys
+    value = values[count]
+    count = count + 1
+    empty_dict[key] = value
+print(empty_dict)
+
+
+    
