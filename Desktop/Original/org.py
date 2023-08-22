@@ -282,6 +282,201 @@ for item in items:
 print(empty_dict)
 
 
+# ------------------------------------------------------------------
+15.
 
 
-    
+nums = [43, 20, 53, 12, 53, 5, 3, 2]
+even = []
+odd = []
+
+for num in nums:
+    if num % 2 == 0:
+        even.append(num)
+print(even)
+
+for num in nums:
+    if num % 2 != 0:
+        odd.append(num)
+print(odd)
+
+
+
+# -----------------------------------------------------------------------
+orders = [
+    {
+        'customer': 'Anita',
+        'pickup':'ikeja',
+        'destination':'vi',
+        'amount': 1500,
+        'status':'pending',
+        'paymentMode' :'cash',
+        'month': 'October'
+    },
+    {
+        'customer': 'Mary',
+        'pickup':'ogba',
+        'destination':'bariga',
+        'amount': 2500,
+        'status':'delivered',
+        'paymentMode' :'transfer',
+        'month': 'July'
+    },
+    {
+        'customer': 'Kola',
+        'pickup':'badagri',
+        'destination':'Sabo',
+        'amount': 5500,
+        'status':'delivered',
+        'paymentMode' :'cash',
+        'month': 'May'
+    },
+    {
+        'customer': 'Kola',
+        'pickup':'VI',
+        'destination':'Mende',
+        'amount': 2500,
+        'status':'pending',
+        'paymentMode' :'cash',
+        'month': 'December'
+    },
+     {
+        'customer': 'Mary',
+        'pickup':'Ikorodu',
+        'destination':'Ogba',
+        'amount': 1500,
+        'status':'delivered',
+        'paymentMode' :'transfer',
+        'month': 'December'
+    },
+     {
+        'customer': 'Victor',
+        'pickup':'Yaba',
+        'destination':'Oyinbo',
+        'amount': 1500,
+        'status':'pending',
+        'paymentMode' :'cash',
+        'month': 'Febuary'
+    },
+    {
+        'customer': 'Anita',
+        'pickup':'Yaba',
+        'destination':'Oyinbo',
+        'amount': 2500,
+        'status':'delivered',
+        'paymentMode' :'cash',
+        'month': 'August'
+    },
+     {
+        'customer': 'Victor',
+        'pickup':'VI',
+        'destination':'Sabo',
+        'amount': 5500,
+        'status':'delivered',
+        'paymentMode' :'transfer',
+        'month': 'Sepetember'
+    },
+     {
+        'customer': 'Mary',
+        'pickup':'Ojota',
+        'destination':'Sabo',
+        'amount': 3500,
+        'status':'pending',
+        'paymentMode' :'cash',
+        'month': 'Sepetember'
+    },
+     {
+        'customer': 'Tosin',
+        'pickup':'Ketu',
+        'destination':'Sabo',
+        'amount': 5500,
+        'status':'delivered',
+        'paymentMode' :'transfer',
+        'month': 'Febuary'
+    },
+     {
+        'customer': 'Mary',
+        'pickup':'Ikorodu',
+        'destination':'VI',
+        'amount': 2500,
+        'status':'delivered',
+        'paymentMode' :'cash',
+        'month': 'July'
+    },
+     {
+        'customer': 'Mary',
+        'pickup':'Ojota',
+        'destination':'Maryland',
+        'amount': 1500,
+        'status':'pending',
+        'paymentMode' :'cash',
+        'month': 'May'
+    },
+    {
+        'customer': 'Victor',
+        'pickup':'Mowe',
+        'destination':'Sabo',
+        'amount': 10500,
+        'status':'pending',
+        'paymentMode' :'transfer',
+        'month': 'March'
+
+    },
+     {
+        'customer': 'Bola',
+        'pickup':'Ogba',
+        'destination':'Ikorodu',
+        'amount': 500,
+        'status':'pending',
+        'paymentMode' :'cash',
+        'month': 'January'
+    },
+     {
+        'customer': 'Anita',
+        'pickup':'VI',
+        'destination':'Sabo',
+        'amount': 1500,
+        'status':'delivered',
+        'paymentMode' :'cash',
+        'month': 'January'
+    }
+]
+# -------------------------------------------------------------------
+
+# What is the total number of orders
+## What is the total number of orders per month
+## What is the total revenue per month
+## How many order came from each customer
+## What is the total revenue per customer
+## What is the total order per the status
+## What is the total revenue made
+## What is the total revenue per payment mode
+
+
+1. 
+print(len(orders))
+
+2. 
+unique_months = []
+for unique_m in orders:
+    if unique_m['month'] not in unique_months:
+        unique_months.append(unique_m['month'])
+print(unique_months)
+
+
+#setting the total values to 0
+empty_dict = {}
+for months in unique_months:
+    key = months
+    value = 0
+    empty_dict[key] = value
+print(empty_dict)
+
+for unique_m in orders:
+    key = unique_m['month']
+    value = empty_dict[key] + 2
+    empty_dict[key] = value
+print(empty_dict)
+
+
+
