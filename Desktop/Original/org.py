@@ -182,18 +182,53 @@ result = dictionary_p(["Black", "Red", "Maroon", "Yellow"], ["#000000", "#FF0000
 print(result) 
 
 
+# ------------------------------------------------------------------
+10.
+"""
+Write a Python program to calculate the sum of the numbers in a list between the indices of a specified range"""
+items = [2, 1, 5, 6, 8, 3, 4, 9, 10, 11, 8, 12]
+defined_items = items[4:9]
 
-item = ["Black", "Red", "Maroon", "Yellow"]
-values = ["#000000", "#FF0000", "#800000", "#FFFF00"]
-
-empty_dict = {}
 count = 0
-for keys in item:
-    key = keys
-    value = values[count]
-    count = count + 1
-    empty_dict[key] = value
-print(empty_dict)
+for item in defined_items:
+    count = count + item
+print(count)
 
 
+
+# ------------------------------------------------------------------
+11.
+"Write a Python script to add a key to a dictionary."
+
+Sample_Dictionary = {0: 10, 1: 20}
+Sample_Dictionary[2] = 30
+print(Sample_Dictionary)
+
+
+# ------------------------------------------------------------------
+12.
+"Write a Python script to concatenate the following dictionaries to create a new one"
+dic1={1:10, 2:20}
+dic2={3:30, 4:40}
+
+dict1 = {**dic1, **dic2}
+
+dic3={5:50,6:60}
+dict1.update(dic3)
+
+print(dict1)
+
+
+dic1 = {1: 10, 2: 20}
+dic2 = {3: 30, 4: 40}
+
+# Create a new dictionary by merging dic1 and dic2
+dict1 = {**dic1, **dic2}
+
+dic3 = {5: 50, 6: 60}
+
+# Update dict1 by merging it with dic3
+dict1.update(dic3)
+
+print(dict1)
     
