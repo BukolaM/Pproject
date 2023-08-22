@@ -453,16 +453,16 @@ orders = [
 ## What is the total revenue per payment mode
 
 
-1. 
+1. # What is the total number of orders
 print(len(orders))
 
-2. 
+# ---------------------------------------------------------------------------
+
+2. # What is the total number of orders
 unique_months = []
 for unique_m in orders:
     if unique_m['month'] not in unique_months:
         unique_months.append(unique_m['month'])
-print(unique_months)
-
 
 #setting the total values to 0
 empty_dict = {}
@@ -470,13 +470,61 @@ for months in unique_months:
     key = months
     value = 0
     empty_dict[key] = value
-print(empty_dict)
+
 
 for unique_m in orders:
     key = unique_m['month']
-    value = empty_dict[key] + 2
+    value = empty_dict[key] + 1
+    empty_dict[key] = value
+print(empty_dict)
+
+
+# ---------------------------------------------------------------------------
+3. # What is the total revenue per month
+unique_months = []
+for unique_m in orders:
+    if unique_m['month'] not in unique_months:
+        unique_months.append(unique_m['month'])
+print(unique_months)
+
+# setting the total values to 0
+empty_dict = {}
+for months in unique_months:
+    key = months
+    value = 0
+    empty_dict[key] = value
+
+
+for unique_m in orders:
+    key = unique_m['month']
+    value = empty_dict[key] + unique_m['amount']
+    empty_dict[key] = value
+print(empty_dict)
+
+# ---------------------------------------------------------------------------
+
+
+5. ## What is the total revenue per payment mode
+unique_p_mode = []
+for unique_p in orders:
+    if unique_p['paymentMode'] not in unique_p_mode:
+        unique_p_mode.append(unique_p['paymentMode'])
+
+
+# setting the total values to 0
+empty_dict = {}
+for unique_m in unique_p_mode:
+    key = unique_m
+    value = 0
+    empty_dict[key] = value
+
+
+for unique_p in orders:
+    key = unique_p['paymentMode']
+    value = empty_dict[key] + unique_p['amount']
     empty_dict[key] = value
 print(empty_dict)
 
 
 
+# ---------------------------------------------------------------------------
