@@ -219,16 +219,69 @@ dict1.update(dic3)
 print(dict1)
 
 
-dic1 = {1: 10, 2: 20}
-dic2 = {3: 30, 4: 40}
 
-# Create a new dictionary by merging dic1 and dic2
-dict1 = {**dic1, **dic2}
 
-dic3 = {5: 50, 6: 60}
+# ------------------------------------------------------------------
+13.
 
-# Update dict1 by merging it with dic3
-dict1.update(dic3)
+"""
+Write a Python program to create a dictionary from a string.
+Note: Track the count of the letters from the string.
+Sample string : 'w3resource'"""
+items = "w3resource"
+unique_items = []
+for item in items:
+    if item not in unique_items:
+        unique_items.append(item)
+print(unique_items)
 
-print(dict1)
+empty_dict = {}
+
+for unique in unique_items:
+    key = unique
+    value = 0
+    empty_dict[key] = value
+print(empty_dict)
+
+
+for unique in items:
+    key = unique
+    value = empty_dict[key] + 1
+    empty_dict[key] = value
+print(empty_dict)
+
+
+# ------------------------------------------------------------------
+14.
+"""
+ Write a Python program to count the number of characters (character frequency) in a string.
+Sample String : google.com"""
+
+#getting the unique items
+items = "google.com"
+empty_item = []
+for item in items:
+    if item not in empty_item:
+        empty_item.append(item)
+print(empty_item)
+
+##setting the value to 0
+empty_dict = {}
+for unique in empty_item:
+    key = unique
+    value = 0
+    empty_dict[key] = value
+print(empty_dict)
+
+#performing increment on the dictionary
+dicti = {}
+for item in items:
+    key = item
+    value = empty_dict[key] + 1
+    empty_dict[key] = value
+print(empty_dict)
+
+
+
+
     
