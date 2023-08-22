@@ -132,7 +132,34 @@ def seperator(items):
             result = result + item
     return result
 
-
-
 a = seperator("PythonExercises")
 print(a) 
+
+
+# ------------------------------------------------------------------
+7. 
+"Write a Python program to print a specified list after removing the 0th, 4th and 5th elements."
+def remove_elements(item):
+    del item[5]
+    del item[4] 
+    del item[0]
+    return item
+
+result = remove_elements(['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow'])
+print(result) 
+
+# ------------------------------------------------------------------
+8.
+"""
+Write a Python program to convert a list of multiple integers into a single integer."""
+def intergers_(items):
+    single_integer = int("".join(map(str, items)))
+    print(single_integer)
+
+
+
+
+
+
+intergers_([11, 33, 50])
+print(result)
