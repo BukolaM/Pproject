@@ -532,4 +532,29 @@ print(empty_dict)
 
 with open('2015 copy.csv') as new_data:
     new_file = new_data.read()
-    print(new_file)
+
+
+
+#to get the header of the data
+all_header = new_file.strip().split('\n')
+header = all_header[0].split(',')
+
+
+#to set the remaining data
+del all_header[0]
+for row in all_header:
+    all_rows = row.split(',')
+
+
+#create a dict
+    empty_dict = {}
+    count = 0
+
+    for headers in header:
+        key = headers
+        value = all_rows[count]
+        empty_dict[key] = value
+        count = count + 1
+    print(empty_dict)
+
+
