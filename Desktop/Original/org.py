@@ -528,3 +528,8 @@ print(empty_dict)
 
 
 # ---------------------------------------------------------------------------
+
+
+with open('2015 copy.csv') as new_data:
+    new_file = new_data.read()
+    print(new_file)
